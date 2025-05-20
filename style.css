@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", serif;
+}
+
+body {
+  background: #292929;
+  color: #f4f4f4;
+  padding: 50px 0;
+}
+
+.main_Container {
+  padding: 0px 5%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.box_Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  margin-top: 50px;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.box img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.box:hover img {
+  transform: scale(1.2);
+}
+
+.box:hover .overlay {
+  height: 100%;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  background: linear-gradient(transparent, #081604 60%);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.overlay h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+button {
+  margin-top: 10px;
+  color: #262626;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 50px;
+  border: none;
+  text-align: center;
+  padding: 5px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
